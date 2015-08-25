@@ -6,4 +6,4 @@ before_install:
   - gem install bundler
   - gem install rake
 script:
-  -DB=sqlite3 bundle exec rspec spec/
+  - DB=sqlite3 bundle exec rspec spec/
