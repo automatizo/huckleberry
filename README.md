@@ -1,3 +1,6 @@
+**Important Notice: This gem is still under active development and not yet
+functional.**
+
 # Huckleberry
 
 Huckleberry imports a curated version of the USDA's nutritional datasets for use
