@@ -8,7 +8,7 @@ recipe aggregators, and other applications.
 
 Thank you to Matt Beedle and his [USDA Nutrient
 Database](https://github.com/mattbeedle/usda-nutrient-database) for a lot of the
-code underlying this project.
+code underlying this project and to the USDA for providing free data!
 
 ## Installation
 
