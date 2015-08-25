@@ -1,8 +1,14 @@
 # Huckleberry
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/huckleberry`. To experiment with that code, run `bin/console` for an interactive prompt.
+Huckleberry imports a curated version of the USDA's nutritional datasets for use
+in nutrition apps. While the USDA's datasets are great for research purposes,
+we've reorganized, recalculated, and developed methods to enable easy access to
+the most useful data for developers of nutrition apps, such as meal planners,
+recipe aggregators, and other applications.
 
-TODO: Delete this and the text above, and describe your gem
+Thank you to Matt Beedle and his [USDA Nutrient
+Database](https://github.com/mattbeedle/usda-nutrient-database) for a lot of the
+code underlying this project.
 
 ## Installation
 
@@ -20,9 +26,29 @@ Or install it yourself as:
 
     $ gem install huckleberry
 
+Install the necessary migrations by running:
+
+    $ rake huckleberry_engine:install:migrations
+
 ## Usage
 
-TODO: Write usage instructions here
+Import nutritional data using the import task:
+
+    $ rake huckleberry:import
+
+Note: The USDA's datasets contain hundreds of thousands of records, which means
+that this process may take some time.
+
+The data can then be accessed in an ingredients model:
+
+    Huckleberry::Ingredient
+    Huckleberry::Ingredient.calories
+    Huckleberry::Ingredient.fats
+    Huckleberry::Ingredient.carbohydrates
+    Huckleberry::Ingredients.proteins
+    Huckleberry::Ingredients.sterols
+    Huckleberry::Ingredients.vitamins
+    Huckleberry::Ingredients.minerals
 
 ## Development
 
@@ -32,8 +58,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/huckleberry. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/automatizo/huckleberry. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 ## License
 
