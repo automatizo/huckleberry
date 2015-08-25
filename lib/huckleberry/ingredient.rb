@@ -4,7 +4,6 @@ module Huckleberry
     self.primary_key = "nutrient_databank_number"
 
     validates :nutrient_databank_number, presence: true, uniqueness: { allow_blank: true }
-
-    # Add Scope Methods
+    validates :name, presence: true
   end
 end

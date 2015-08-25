@@ -1,6 +1,9 @@
 **Important Notice: This gem is still under active development and not yet
 functional.**
 
+[![Code
+Climate](https://codeclimate.com/github/automatizo/huckleberry/badges/gpa.svg)](https://codeclimate.com/github/automatizo/huckleberry)
+
 # Huckleberry
 
 Huckleberry imports a curated version of the USDA's nutritional datasets for use
