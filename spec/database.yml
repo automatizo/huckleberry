@@ -13,7 +13,7 @@ mysql:
 postgresql:
   adapter: postgresql
   hostname: localhost
-  username: postgres
-  password:
+  username: action
+  password: 
   database: huckleberry_test
   encoding: utf8

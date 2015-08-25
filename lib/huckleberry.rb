@@ -6,8 +6,8 @@ require "huckleberry/ingredient"
 require "huckleberry/import/base"
 require "huckleberry/import/downloader"
 require "huckleberry/import/ingredients"
-require "huckleberry/engine"
-require "huckleberry/railtie"
+require "huckleberry/engine" if defined?(Rails)
+require "huckleberry/railtie" if defined?(Rails)
 
 module Huckleberry
   # Your code goes here...

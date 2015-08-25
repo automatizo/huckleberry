@@ -7,7 +7,7 @@ describe Huckleberry::Import::Downloader do
   let(:version) { "sr27" }
   let(:filenames) do
     [
-      "DATA_SRC.txt", "DATSRCLN.txt", "DERIV_CD.txt", "FD_GROUP.txt", "FOOD_DES.txt", "FOOTNOTE.txt", "LANGDESC.txt", "LANGUAL.txt", "NUTR_DEF.txt", "NUT_DATA.txt", "SRC_CD.txt", "WEIGHT.txt", "sr27_doc.pdf"
+      "FOOD_DES.txt"
     ]
   end
 
@@ -29,7 +29,7 @@ describe Huckleberry::Import::Downloader do
 
     it "should download and extract all files" do
       filenames.each do |filename|
-        expect(File.exists?("#{extraction_path}/#{filename}")).to eql(true)
+        expect(File.exists?("#{extraction_path}/#{filename}")).to eq(true)
       end
     end
   end
