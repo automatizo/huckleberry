@@ -3,6 +3,14 @@ module Huckleberry
     class Ingredients < Base
       private
 
+      def build_object(row)
+        find_or_initialize(row).tap do |object|
+          columns.each do |k, v|
+            object.send("#{k}=", row[v])
+          end
+        end
+      end
+
       def apply_typecasts(row)
         row[6] = row[6].present?
         row

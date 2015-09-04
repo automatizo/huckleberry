@@ -21,14 +21,6 @@ module Huckleberry
         build_object(apply_typecasts(row)).save
       end
 
-      def build_object(row)
-        find_or_initialize(row).tap do |object|
-          columns.each do |k, v|
-            object.send("#{k}=", row[v])
-          end
-        end
-      end
-
       def csv_options
         { col_sep: "^", quote_char: "~" }
       end

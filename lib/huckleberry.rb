@@ -3,9 +3,11 @@ require "active_record"
 require "huckleberry/version"
 require "huckleberry/importer"
 require "huckleberry/ingredient"
+require "huckleberry/calorie"
 require "huckleberry/import/base"
 require "huckleberry/import/downloader"
 require "huckleberry/import/ingredients"
+require "huckleberry/import/nutrients"
 require "huckleberry/engine" if defined?(Rails)
 require "huckleberry/railtie" if defined?(Rails)
 

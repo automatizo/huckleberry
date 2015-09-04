@@ -17,7 +17,7 @@ module Huckleberry
     private
 
     def importer_names
-      [ "Ingredients" ]
+      [ "Ingredients", "Nutrients" ]
     end
 
     def importer_for(importer_name)

@@ -14,6 +14,7 @@ describe Huckleberry::Importer do
 
     it "should import the correct number of records" do
       expect(Huckleberry::Ingredient.count).to eq(5)
+      expect(Huckleberry::Calorie.count).to eq(1)
     end
 
     context "importing twice" do
@@ -21,6 +22,7 @@ describe Huckleberry::Importer do
 
       it "should import the correct number of records" do
         expect(Huckleberry::Ingredient.count).to eq(5)
+        expect(Huckleberry::Calorie.count).to eq(1)
       end
     end
   end
