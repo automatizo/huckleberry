@@ -5,5 +5,7 @@ module Huckleberry
 
     validates :nutrient_databank_number, presence: true, uniqueness: { allow_blank: true }
     validates :name, presence: true
+
+    has_one :calorie, foreign_key: :nutrient_databank_number
   end
 end
