@@ -18,7 +18,9 @@ module Huckleberry
       attr_reader :directory
 
       def extract_row(row)
-        build_object(apply_typecasts(row)).save
+        unless build_object(apply_typecasts(row)).nil?
+          build_object(apply_typecasts(row)).save
+        end
       end
 
       def csv_options

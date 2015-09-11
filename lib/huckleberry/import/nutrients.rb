@@ -4,24 +4,24 @@ module Huckleberry
       private
 
       def build_object(row)
-        find_or_initialize(row).tap do |object|
-          relevant_rows = nutrient_names.find_all { |n| n[0] == row[1].to_i }
-          relevant_rows.each do |k, v|
-            # TODO: Add multiplier to value using method below.
-            object.send(:nutrient_databank_number=, row[0])
-            object.send("#{v}=", row[2])
+        if tracked?(row)
+          find_or_initialize(row).tap do |object|
+            column = columns.find { |n| n[1] == row[1].to_i }
+            object.send("#{column[0]}=", row[2])
           end
         end
       end
 
       def find_or_initialize(row)
-        if nutrient_type(row)
-          "Huckleberry::#{nutrient_type(row)}".constantize.find_or_initialize_by(nutrient_databank_number: row[0])
-        end
+        "Huckleberry::#{nutrient_type(row)}".constantize.find_or_initialize_by(nutrient_databank_number: row[0])
       end
 
       def filename
         "NUT_DATA.txt"
+      end
+
+      def tracked?(row)
+        true if columns.has_value?(row[1].to_i)
       end
 
       def nutrient_type(row)
@@ -31,17 +31,11 @@ module Huckleberry
         end
       end
 
-      # Returns name given ID
-      def nutrient_name(id)
-        nutrient_names[id]
-      end
-
-      # This is the basis for sub-class of Ingredient
       # TODO: Finish adding all data points needed.
       def nutrient_categories
         {
-          calorie: [268],
-          # fat: [],
+          calorie: [208],
+          # fat: [204, 606, 645, 646],
           # carbohydrate: [],
           # protein: [],
           # sterol: [],
@@ -52,22 +46,19 @@ module Huckleberry
 
       # TODO: Finish adding all data points needed.
       # TODO: Create migrations for all of these.
-      def nutrient_names
+      def columns
         {
-          268 => :calories, 203 => "total_protein", 204 => "total_fat",
-          291 => "total_fiber", 269 => "total_sugar", 205 => "total_carbohydrate",
-          210 => "sucrose", 211 => "glucose", 212 => "fructose",
-          213 => "lactose", 214 => "maltose", 287 => "galactose",
-          209 => "starch", 301 => "calcium", 303 => "iron",
-          304 => "magnesium", 305 => "phosphorus", 306 => "potassium",
-          307 => "sodium", 309 => "zinc", 312 => "copper",
-          315 => "manganese", 317 => "selenium", 313 => "fluoride",
-          401 => "vitamin_c", 404 => "thiamin", 405 => "riboflavin",
+          calories: 208
         }
-      end
-
-      def nutrient_multiplier
-
+        # 203 => "total_protein", 204 => "total_fat",
+        # 291 => "total_fiber", 269 => "total_sugar", 205 => "total_carbohydrate",
+        # 210 => "sucrose", 211 => "glucose", 212 => "fructose",
+        # 213 => "lactose", 214 => "maltose", 287 => "galactose",
+        # 209 => "starch", 301 => "calcium", 303 => "iron",
+        # 304 => "magnesium", 305 => "phosphorus", 306 => "potassium",
+        # 307 => "sodium", 309 => "zinc", 312 => "copper",
+        # 315 => "manganese", 317 => "selenium", 313 => "fluoride",
+        # 401 => "vitamin_c", 404 => "thiamin", 405 => "riboflavin"
       end
     end
   end

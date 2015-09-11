@@ -7,5 +7,7 @@ module Huckleberry
     validates :name, presence: true
 
     has_one :calorie, foreign_key: :nutrient_databank_number
+
+    delegate :calories, to: :calorie
   end
 end
