@@ -35,7 +35,7 @@ module Huckleberry
       def nutrient_categories
         {
           calorie: [208],
-          # fat: [204, 606, 645, 646],
+          fat: [204, 606, 645, 646, 851, 629, 631, 621, 601, 605, 852, 675, 685, 672, 853, 855],
           # carbohydrate: [],
           # protein: [],
           # sterol: [],
@@ -48,17 +48,13 @@ module Huckleberry
       # TODO: Create migrations for all of these.
       def columns
         {
-          calories: 208
+          calories: 208, total_fat: 204, saturated_fat: 606,
+          monounsaturated_fat: 645, polyunsaturated_fat: 646,
+          omega_3_ala: 851, omega_3_epa: 629, omega_3_dpa: 631,
+          omega_3_dha: 621, omega_3_other: 852, omega_6_1: 675,
+          omega_6_2: 685, omega_6_3: 672, omega_6_4: 853, omega_6_5: 855,
+          cholesterol: 601, trans_fat: 605
         }
-        # 203 => "total_protein", 204 => "total_fat",
-        # 291 => "total_fiber", 269 => "total_sugar", 205 => "total_carbohydrate",
-        # 210 => "sucrose", 211 => "glucose", 212 => "fructose",
-        # 213 => "lactose", 214 => "maltose", 287 => "galactose",
-        # 209 => "starch", 301 => "calcium", 303 => "iron",
-        # 304 => "magnesium", 305 => "phosphorus", 306 => "potassium",
-        # 307 => "sodium", 309 => "zinc", 312 => "copper",
-        # 315 => "manganese", 317 => "selenium", 313 => "fluoride",
-        # 401 => "vitamin_c", 404 => "thiamin", 405 => "riboflavin"
       end
     end
   end
