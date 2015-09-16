@@ -6,6 +6,6 @@ describe Huckleberry::Import::Nutrients do
   describe "#import" do
     before { importer.import }
 
-    it { expect(Huckleberry::Calorie.count).to eql(1) }
+    it { expect(Huckleberry::Calorie.count).to eq(1) }
   end
 end
