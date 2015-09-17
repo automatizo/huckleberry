@@ -36,7 +36,7 @@ module Huckleberry
         {
           calorie: [208],
           fat: [204, 606, 645, 646, 851, 629, 631, 621, 601, 605, 852, 675, 685, 672, 853, 855],
-          # carbohydrate: [],
+          carbohydrate: [205, 291, 209, 269, 211, 210, 212, 213],
           # protein: [],
           # sterol: [],
           # vitamin: [],
@@ -53,7 +53,9 @@ module Huckleberry
           omega_3_ala: 851, omega_3_epa: 629, omega_3_dpa: 631,
           omega_3_dha: 621, omega_3_other: 852, omega_6_1: 675,
           omega_6_2: 685, omega_6_3: 672, omega_6_4: 853, omega_6_5: 855,
-          cholesterol: 601, trans_fat: 605
+          cholesterol: 601, trans_fat: 605, total_carbohydrate: 205,
+          dietary_fiber: 291, starch: 209, sugar: 269, glucose: 211,
+          sucrose: 210, fructose: 212, lactose: 213
         }
       end
     end
