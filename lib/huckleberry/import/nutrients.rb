@@ -40,7 +40,7 @@ module Huckleberry
           # protein: [],
           # sterol: [],
           # vitamin: [],
-          # mineral: []
+          mineral: [301, 303, 304, 305, 306, 307, 309, 312, 315, 317, 313]
         }
       end
 
@@ -55,7 +55,10 @@ module Huckleberry
           omega_6_2: 685, omega_6_3: 672, omega_6_4: 853, omega_6_5: 855,
           cholesterol: 601, trans_fat: 605, total_carbohydrate: 205,
           dietary_fiber: 291, starch: 209, sugar: 269, glucose: 211,
-          sucrose: 210, fructose: 212, lactose: 213
+          sucrose: 210, fructose: 212, lactose: 213, calcium: 301,
+          iron: 303, magnesium: 304, phosphorus: 305, potassium: 306,
+          sodium: 307, zinc: 309, copper: 312, manganese: 315,
+          selenium: 317, flouride: 313
         }
       end
     end

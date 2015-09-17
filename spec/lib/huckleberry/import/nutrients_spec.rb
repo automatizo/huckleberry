@@ -8,5 +8,6 @@ describe Huckleberry::Import::Nutrients do
 
     it { expect(Huckleberry::Calorie.count).to eq(1) }
     # it { expect(Huckleberry::Fat.count).to eq(1) }
+    # it { expect(Huckleberry::Carbohydrate.count).to eq(1) }
   end
 end
