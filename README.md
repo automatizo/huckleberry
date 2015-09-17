@@ -14,7 +14,7 @@ the most useful data for developers of nutrition apps, such as meal planners,
 recipe aggregators, and other applications.
 
 Thank you to Matt Beedle and his [USDA Nutrient
-Database](https://github.com/mattbeedle/usda-nutrient-database) for a lot of the
+Database](https://github.com/mattbeedle/usda-nutrient-database) for some of the
 code underlying this project and to the USDA for providing free data!
 
 ## Installation
@@ -37,6 +37,10 @@ Install the necessary migrations by running:
 
     $ rake huckleberry_engine:install:migrations
 
+And then migrate the database:
+
+    $ rake db:migrate
+
 ## Usage
 
 Import nutritional data using the import task:
@@ -46,16 +50,13 @@ Import nutritional data using the import task:
 Note: The USDA's datasets contain hundreds of thousands of records, which means
 that this process may take some time.
 
-The data can then be accessed in an ingredients model:
+The data can then be accessed in an ingredients model, for example:
 
     Huckleberry::Ingredient
-    Huckleberry::Ingredient.calories
-    Huckleberry::Ingredient.fats
-    Huckleberry::Ingredient.carbohydrates
-    Huckleberry::Ingredients.proteins
-    Huckleberry::Ingredients.sterols
-    Huckleberry::Ingredients.vitamins
-    Huckleberry::Ingredients.minerals
+    Huckleberry::Ingredient.total_calories
+    Huckleberry::Ingredient.saturated_fat
+    Huckleberry::Ingredient.fructose
+    Huckleberry::Ingredients.selenium
 
 ## Contributing
 
