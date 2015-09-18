@@ -59,7 +59,7 @@ module Huckleberry
           iron: 303, magnesium: 304, phosphorus: 305, potassium: 306,
           sodium: 307, zinc: 309, copper: 312, manganese: 315,
           selenium: 317, flouride: 313, vitamin_a: 318, vitamin_c: 401,
-          vitamin_d: 324, vitamin_e: 323, vitamin_k: 306, thiamin: 404,
+          vitamin_d: 324, vitamin_e: 323, vitamin_k: 430, thiamin: 404,
           riboflavin: 405, niacin: 406, vitamin_b6: 415, folate: 417,
           vitamin_b12: 418, pantothenic_acid: 410, choline: 421,
           betaine: 454
