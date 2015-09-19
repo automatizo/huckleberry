@@ -31,21 +31,18 @@ module Huckleberry
         end
       end
 
-      # TODO: Finish adding all data points needed.
       def nutrient_categories
         {
           calorie: [208],
           fat: [204, 606, 645, 646, 851, 629, 631, 621, 605, 852, 675, 685, 672, 853, 855],
           carbohydrate: [205, 291, 209, 269, 211, 210, 212, 213],
           protein: [203],
-          # sterol: [601, 636],
+          sterol: [601, 636],
           vitamin: [318, 401, 324, 323, 430, 404, 405, 406, 415, 417, 418, 410, 421, 454],
           mineral: [301, 303, 304, 305, 306, 307, 309, 312, 315, 317, 313]
         }
       end
 
-      # TODO: Finish adding all data points needed.
-      # TODO: Create migrations for all of these.
       def columns
         {
           calories: 208, total_fat: 204, saturated_fat: 606,
@@ -62,7 +59,7 @@ module Huckleberry
           vitamin_d: 324, vitamin_e: 323, vitamin_k: 430, thiamin: 404,
           riboflavin: 405, niacin: 406, vitamin_b6: 415, folate: 417,
           vitamin_b12: 418, pantothenic_acid: 410, choline: 421,
-          betaine: 454, total_protein: 203 #, cholesterol: 601, phytosterol: 636
+          betaine: 454, total_protein: 203, cholesterol: 601, phytosterol: 636
         }
       end
     end
