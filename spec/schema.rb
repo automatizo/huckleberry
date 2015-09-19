@@ -22,7 +22,6 @@ ActiveRecord::Schema.define do
     t.float :omega_3_dpa
     t.float :omega_3_dha
     t.float :omega_3_other
-    t.float :cholesterol
     t.float :trans_fat
     t.float :omega_6_1
     t.float :omega_6_2
