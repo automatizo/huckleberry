@@ -7,4 +7,5 @@ describe Huckleberry::Ingredient do
   it { should have_one(:fat) }
   it { should have_one(:mineral) }
   it { should have_one(:vitamin) }
+  it { should have_one(:protein) }
 end

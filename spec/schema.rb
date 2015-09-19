@@ -75,4 +75,9 @@ ActiveRecord::Schema.define do
     t.float :choline
     t.float :betaine
   end
+
+  create_table :huckleberry_proteins do |t|
+    t.string :nutrient_databank_number, null: false, index: true, unique: true
+    t.float :total_protein
+  end
 end
